@@ -1,5 +1,5 @@
 --CREATE DATABASE  IF NOT EXISTS `crm` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `crm`;
+
 
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
@@ -25,21 +25,21 @@ USE `crm`;
 
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `hire_date` datetime DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `username` varchar(50) NOT NULL,
-  `status` varchar(100) DEFAULT NULL,
-  `token` varchar(500) DEFAULT NULL,
-  `is_password_set` tinyint(1) DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `username` (`username`)
+CREATE TABLE IF NOT EXISTS "users" (
+  "id" SERIAL PRIMARY KEY,
+  "email" VARCHAR(100) NOT NULL,
+  "password" VARCHAR(255) DEFAULT NULL,
+  "hire_date" TIMESTAMP DEFAULT NULL,
+  "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  "updated_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  "username" VARCHAR(50) NOT NULL,
+  "status" VARCHAR(100) DEFAULT NULL,
+  "token" VARCHAR(500) DEFAULT NULL,
+  "is_password_set" BOOLEAN DEFAULT FALSE,
+  UNIQUE ("email"),
+  UNIQUE ("username")
 ) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

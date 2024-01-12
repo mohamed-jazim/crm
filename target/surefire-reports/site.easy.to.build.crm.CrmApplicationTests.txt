@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: site.easy.to.build.crm.CrmApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.957 s - in site.easy.to.build.crm.CrmApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.144 s - in site.easy.to.build.crm.CrmApplicationTests
+>>>>>>> 7291ff8a6094e88265ba6cea9c45b271b0a63aa3
